@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigneshwaran | Portfolio</title>
+    <meta name="description" content="Portfolio website of Vigneshwaran - Computer Science Engineer & Web Developer">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="#" class="logo">
+                    <span class="logo-highlight">V</span>igneshwaran
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="container">
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#resume" class="mobile-nav-link">Resume</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+                <div class="mobile-theme-toggle">
+                    <span>Theme:</span>
+                    <button id="mobile-theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div id="particles-container" class="particles-container"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h4 class="hero-subtitle reveal">Hello, my name is</h4>
+                        <h1 class="hero-title reveal">Vigneshwaran</h1>
+                        <p class="hero-description reveal">Computer Science Engineer & Web Developer</p>
+                        <p class="hero-paragraph reveal">
+                            I'm a passionate developer specializing in creating memorable digital experiences.
+                            My focus is on building accessible, responsive web applications with engaging
+                            animations and interactions.
+                        </p>
+                        <div class="hero-buttons reveal">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="hero-code reveal">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="code-filename">coder.js</div>
+                            </div>
+                            <div class="code-content">
+                                <p><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {</p>
+                                <p class="code-indent"><span class="code-property">name:</span> <span class="code-string">'Vigneshwaran'</span>,</p>
+                                <p class="code-indent"><span class="code-property">skills:</span> [<span class="code-string">'HTML'</span>, <span class="code-string">'CSS'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'Java'</span>, <span class="code-string">'Python'</span>],</p>
+                                <p class="code-indent"><span class="code-property">passion:</span> <span class="code-string">'Creating interactive web experiences'</span>,</p>
+                                <p class="code-indent"><span class="code-property">education:</span> <span class="code-string">'Computer Science @ Yenepoya Institute of Technology'</span>,</p>
+                                <p>};</p>
+                                <p class="code-spacing"><span class="code-variable">developer</span>.<span class="code-method">createAmazingThings</span>();</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-down">
+                    <a href="#about" aria-label="Scroll down to About section">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal">About Me</h2>
+                    <div class="section-divider reveal"></div>
+                    <p class="section-description reveal">
+                        Get to know more about my background, experience, and what drives me as a developer.
+                    </p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text reveal">
+                        <h3>Who I Am</h3>
+                        <p>
+                            I'm a Computer Science graduate from Yenepoya Institute of Technology with a passion for creating 
+                            innovative digital solutions. My journey in technology began with a curiosity about how things work 
+                            on the web, which led me to dive deep into web development and software engineering.
+                        </p>
+                        <p>
+                            I'm driven by the challenge of solving complex problems through clean code and creative thinking. 
+                            Whether it's building responsive websites, developing user-friendly applications, or optimizing 
+                            system performance, I approach each project with enthusiasm and a commitment to excellence.
+                        </p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <h4>Education</h4>
+                                <p>B.E in Computer Science</p>
+                                <p>Yenepoya Institute of Technology</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Experience</h4>
+                                <p>Intern at Agile Tech Pvt Ltd</p>
+                                <p>Java Web Application Development</p>
+                            </div>
+                        </div>
+                        <div class="about-tags">
+                            <span class="tag">Problem Solver</span>
+                            <span class="tag">Team Player</span>
+                            <span class="tag">Creative Thinker</span>
+                            <span class="tag">Adaptable</span>
+                            <span class="tag">Detail-Oriented</span>
+                        </div>
+                    </div>
+                    <div class="about-skills reveal">
+                        <div class="skills-grid">
+                            <div class="skill-card skill-card-large bg-primary-light">
+                                <i class="fas fa-code skill-icon"></i>
+                                <h3>Web Development</h3>
+                                <p>Creating responsive, user-friendly websites with modern technologies</p>
+                            </div>
+                            <div class="skill-card bg-secondary-light">
+                                <i class="fas fa-mobile-alt skill-icon"></i>
+                                <h3>App Development</h3>
+                                <p>Building functional mobile applications</p>
+                            </div>
+                            <div class="skill-card bg-yellow-light">
+                                <i class="fas fa-server skill-icon"></i>
+                                <h3>Backend Systems</h3>
+                                <p>Developing robust server-side solutions</p>
+                            </div>
+                            <div class="skill-card skill-card-large bg-blue-light">
+                                <i class="fas fa-brain skill-icon"></i>
+                                <h3>Deep Learning</h3>
+                                <p>Exploring intelligent systems and neural networks for innovative solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding section-alternate">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal">My Skills</h2>
+                    <div class="section-divider reveal"></div>
+                    <p class="section-description reveal">
+                        A comprehensive look at my technical expertise and professional capabilities.
+                    </p>
+                </div>
+                <div class="skills-content">
+                    <div class="technical-skills reveal">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item" data-progress="90">
+                                <div class="skill-info">
+                                    <h4>HTML/CSS</h4>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <div class="skills-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-progress="85">
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <div class="skills-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-progress="80">
+                                <div class="skill-info">
+                                    <h4>Java</h4>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <div class="skills-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-progress="75">
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <div class="skills-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-progress="70">
+                                <div class="skill-info">
+                                    <h4>MySQL</h4>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <div class="skills-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item" data-progress="65">
+                                <div class="skill-info">
+                                    <h4>C/C++</h4>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skills-bar">
+                                    <div class="skills-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="professional-skills reveal">
+                        <h3>Professional Skills</h3>
+                        <div class="skill-circles">
+                            <div class="skill-circle" data-percent="95" data-color="#8b5cf6">
+                                <svg viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-progress" cx="60" cy="60" r="54" stroke-dasharray="339.3" stroke-dashoffset="339.3"></circle>
+                                </svg>
+                                <div class="circle-text">
+                                    <span class="percent">95%</span>
+                                    <span class="skill-name">Problem Solving</span>
+                                </div>
+                            </div>
+                            <div class="skill-circle" data-percent="90" data-color="#10b981">
+                                <svg viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-progress" cx="60" cy="60" r="54" stroke-dasharray="339.3" stroke-dashoffset="339.3"></circle>
+                                </svg>
+                                <div class="circle-text">
+                                    <span class="percent">90%</span>
+                                    <span class="skill-name">Communication</span>
+                                </div>
+                            </div>
+                            <div class="skill-circle" data-percent="85" data-color="#f59e0b">
+                                <svg viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-progress" cx="60" cy="60" r="54" stroke-dasharray="339.3" stroke-dashoffset="339.3"></circle>
+                                </svg>
+                                <div class="circle-text">
+                                    <span class="percent">85%</span>
+                                    <span class="skill-name">Teamwork</span>
+                                </div>
+                            </div>
+                            <div class="skill-circle" data-percent="80" data-color="#3b82f6">
+                                <svg viewBox="0 0 120 120">
+                                    <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+                                    <circle class="circle-progress" cx="60" cy="60" r="54" stroke-dasharray="339.3" stroke-dashoffset="339.3"></circle>
+                                </svg>
+                                <div class="circle-text">
+                                    <span class="percent">80%</span>
+                                    <span class="skill-name">Creativity</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="other-skills reveal">
+                    <h3>Other Skills & Tools</h3>
+                    <div class="skill-tags">
+                        <div class="skill-tag">
+                            <i class="fab fa-figma"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-server"></i>
+                            <span>Web Servers</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>JSP/Servlets</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i class="fas fa-file-excel"></i>
+                            <span>MS Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal">My Projects</h2>
+                    <div class="section-divider reveal"></div>
+                    <p class="section-description reveal">
+                        Explore my latest work and the projects I've built to showcase my skills and creativity.
+                    </p>
+                </div>
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="app">App Development</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Projects will be inserted here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume-section section-padding section-alternate">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal">My Resume</h2>
+                    <div class="section-divider reveal"></div>
+                    <p class="section-description reveal">
+                        A comprehensive overview of my education, experience, and qualifications.
+                    </p>
+                    <div class="resume-download reveal">
+                        <a href="resume.html" class="btn btn-primary">
+                            <i class="fas fa-download"></i> View Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="resume-content">
+                    <div class="resume-column reveal">
+                        <h3 class="resume-heading">
+                            <span class="resume-icon"><i class="fas fa-graduation-cap"></i></span>
+                            Education
+                        </h3>
+                        <div class="resume-items">
+                            <!-- Education items will be inserted here via JavaScript -->
+                        </div>
+                    </div>
+                    <div class="resume-column reveal">
+                        <h3 class="resume-heading">
+                            <span class="resume-icon"><i class="fas fa-briefcase"></i></span>
+                            Experience & Certifications
+                        </h3>
+                        <div class="resume-items">
+                            <!-- Experience items will be inserted here via JavaScript -->
+                            <div class="resume-item certifications">
+                                <h4>Certifications</h4>
+                                <div class="certifications-list">
+                                    <!-- Certifications will be inserted here via JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-extras">
+                    <div class="languages-section reveal">
+                        <h3 class="resume-subheading">
+                            <span class="resume-icon small"><i class="fas fa-language"></i></span>
+                            Languages
+                        </h3>
+                        <div class="languages-grid">
+                            <!-- Languages will be inserted here via JavaScript -->
+                        </div>
+                    </div>
+                    <div class="interests-section reveal">
+                        <h3 class="resume-subheading">
+                            <span class="resume-icon small"><i class="fas fa-heart"></i></span>
+                            Interests & Hobbies
+                        </h3>
+                        <div class="interests-grid">
+                            <!-- Interests will be inserted here via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal">Get In Touch</h2>
+                    <div class="section-divider reveal"></div>
+                    <p class="section-description reveal">
+                        Have a project in mind or just want to say hello? Feel free to reach out!
+                    </p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-form reveal">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="Project Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" rows="5" placeholder="Hello, I would like to talk about..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info reveal">
+                        <div class="info-header">
+                            <h3>Contact Information</h3>
+                            <p>
+                                Feel free to reach out to me through any of the methods below. I'm always open to discussing new projects, 
+                                creative ideas, or opportunities to be part of your vision.
+                            </p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p>22-3-519 shridhar compound, Jeppu, morgansgate, Dakshina Kannada, India</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:gvignesh9480@gmail.com">gvignesh9480@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+919148740836">+91 9148740836</a>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <h4>Connect with me</h4>
+                            <div class="social-icons">
+                                <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">
+                        <span class="logo-highlight">V</span>igneshwaran
+                    </a>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; <span id="current-year"></span> Vigneshwaran. All rights reserved.</p>
+                    <p>Designed and built with <i class="fas fa-heart"></i> by me</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Cursor Effect (only on desktop) -->
+    <div id="cursor-glow" class="cursor-glow"></div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
