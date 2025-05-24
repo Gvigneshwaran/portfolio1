@@ -1,4 +1,3 @@
-// DOM Elements
 const body = document.body;
 const navbar = document.getElementById('navbar');
 const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -10,12 +9,10 @@ const contactForm = document.getElementById('contactForm');
 const cursorGlow = document.getElementById('cursor-glow');
 const currentYearEl = document.getElementById('current-year');
 
-// Set current year in footer
 if (currentYearEl) {
     currentYearEl.textContent = new Date().getFullYear();
 }
 
-// Theme Toggle
 function toggleTheme() {
     if (body.classList.contains('dark')) {
         body.classList.remove('dark');
@@ -30,7 +27,6 @@ function toggleTheme() {
     }
 }
 
-// Check for saved theme
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     body.classList.add('dark');
@@ -38,7 +34,6 @@ if (savedTheme === 'dark') {
     mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
-// Event Listeners
 if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);
 }
@@ -47,14 +42,12 @@ if (mobileThemeToggle) {
     mobileThemeToggle.addEventListener('click', toggleTheme);
 }
 
-// Mobile Menu Toggle
 if (mobileMenuButton) {
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
     });
 }
 
-// Close mobile menu when clicking a link
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -62,7 +55,6 @@ mobileNavLinks.forEach(link => {
     });
 });
 
-// Navbar Scroll Effect
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -70,7 +62,6 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('scrolled');
     }
     
-    // Back to top button
     if (backToTop) {
         if (window.scrollY > 500) {
             backToTop.classList.add('visible');
@@ -79,11 +70,9 @@ window.addEventListener('scroll', () => {
         }
     }
     
-    // Animate elements on scroll
     animateOnScroll();
 });
 
-// Back to top functionality
 if (backToTop) {
     backToTop.addEventListener('click', () => {
         window.scrollTo({
@@ -93,7 +82,6 @@ if (backToTop) {
     });
 }
 
-// Cursor glow effect (desktop only)
 if (cursorGlow && window.innerWidth > 768) {
     document.addEventListener('mousemove', (e) => {
         cursorGlow.style.left = `${e.clientX}px`;
@@ -106,7 +94,6 @@ if (cursorGlow && window.innerWidth > 768) {
     });
 }
 
-// Contact form submission
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -116,16 +103,13 @@ if (contactForm) {
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
         
-        // In a real application, you would send this data to a server
         console.log('Form submitted:', { name, email, subject, message });
         alert('Thank you for your message! I\'ll get back to you soon.');
-        
-        // Reset form
+       
         contactForm.reset();
     });
 }
 
-// Animation on scroll
 function animateOnScroll() {
     const revealElements = document.querySelectorAll('.reveal');
     
@@ -138,7 +122,6 @@ function animateOnScroll() {
         }
     });
     
-    // Animate skill bars
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach(item => {
         const itemTop = item.getBoundingClientRect().top;
@@ -154,7 +137,6 @@ function animateOnScroll() {
         }
     });
     
-    // Animate skill circles
     const skillCircles = document.querySelectorAll('.skill-circle');
     skillCircles.forEach(circle => {
         const circleTop = circle.getBoundingClientRect().top;
@@ -165,12 +147,11 @@ function animateOnScroll() {
             const circleProgress = circle.querySelector('.circle-progress');
             
             if (circleProgress) {
-                const circumference = 339.3; // 2 * Math.PI * 54
+                const circumference = 339.3; 
                 const offset = circumference - (circumference * percent / 100);
                 circleProgress.style.transition = 'stroke-dashoffset 1.5s ease-in-out';
                 circleProgress.style.strokeDashoffset = offset;
                 
-                // Set the circle color
                 const color = circle.getAttribute('data-color');
                 if (color) {
                     circleProgress.style.stroke = color;
@@ -180,7 +161,6 @@ function animateOnScroll() {
     });
 }
 
-// Project Data
 const projects = [
     {
         id: 1,
@@ -262,7 +242,6 @@ const projects = [
     }
 ];
 
-// Resume Data
 const education = [
     {
         degree: "Bachelor of Engineering in Computer Science",
@@ -376,7 +355,6 @@ const interests = [
     }
 ];
 
-// Populate Projects
 function renderProjects(filteredProjects = projects) {
     const projectsGrid = document.querySelector('.projects-grid');
     if (!projectsGrid) return;
@@ -418,21 +396,17 @@ function renderProjects(filteredProjects = projects) {
         projectsGrid.appendChild(projectCard);
     });
     
-    // Re-trigger animation for newly added elements
     setTimeout(animateOnScroll, 100);
 }
 
-// Project Filtering
 const filterButtons = document.querySelectorAll('.filter-btn');
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const filterValue = button.getAttribute('data-filter');
         
-        // Update active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         
-        // Filter projects
         const filteredProjects = filterValue === 'all' 
             ? projects 
             : projects.filter(project => project.category === filterValue);
@@ -441,10 +415,9 @@ filterButtons.forEach(button => {
     });
 });
 
-// Populate Resume
 function renderResume() {
-    // Education
-    const educationContainer = document.querySelector('.resume-items:first-of-type');
+    // Target education container specifically
+    const educationContainer = document.getElementById('education-container');
     if (educationContainer) {
         education.forEach(item => {
             const educationItem = document.createElement('div');
@@ -459,24 +432,24 @@ function renderResume() {
         });
     }
     
-    // Experience
-    const experienceContainer = document.querySelector('.resume-items:last-of-type');
+    // Target experience container specifically
+    const experienceContainer = document.getElementById('experience-container');
     if (experienceContainer) {
         experience.forEach(item => {
             const experienceItem = document.createElement('div');
-            experienceItem.className = 'resume-item';
+            experienceItem.className = 'resume-ex-item';
             experienceItem.innerHTML = `
-                <span class="resume-date">${item.period}</span>
+                <span class="resume-period">${item.period}</span>
                 <h4>${item.title}</h4>
                 <p class="institution">${item.company}</p>
                 <p>${item.project}</p>
                 <p>${item.description}</p>
             `;
-            experienceContainer.insertBefore(experienceItem, experienceContainer.firstChild);
+            experienceContainer.appendChild(experienceItem);
         });
     }
+
     
-    // Certifications
     const certificationsContainer = document.querySelector('.certifications-list');
     if (certificationsContainer) {
         certifications.forEach(cert => {
@@ -490,7 +463,6 @@ function renderResume() {
         });
     }
     
-    // Languages
     const languagesContainer = document.querySelector('.languages-grid');
     if (languagesContainer) {
         languages.forEach(lang => {
@@ -513,7 +485,6 @@ function renderResume() {
         });
     }
     
-    // Interests
     const interestsContainer = document.querySelector('.interests-grid');
     if (interestsContainer) {
         interests.forEach(interest => {
@@ -533,12 +504,10 @@ function renderResume() {
     }
 }
 
-// Particles Animation
 function createParticles() {
     const container = document.getElementById('particles-container');
     if (!container) return;
     
-    // Clear previous particles
     container.innerHTML = '';
     
     const particleCount = 30;
@@ -548,7 +517,6 @@ function createParticles() {
         const particle = document.createElement('div');
         particle.className = 'particle';
         
-        // Random properties
         const size = Math.random() * 10 + 5;
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
@@ -570,7 +538,6 @@ function createParticles() {
     }
 }
 
-// Add keyframes for particle animation
 function addParticleAnimation() {
     const styleSheet = document.createElement('style');
     styleSheet.innerHTML = `
@@ -582,18 +549,15 @@ function addParticleAnimation() {
     document.head.appendChild(styleSheet);
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    // Initial animations
+document.addEventListener('DOMContentLoaded', 
+    function() {
+
     setTimeout(animateOnScroll, 100);
     
-    // Render projects
     renderProjects();
     
-    // Render resume data
     renderResume();
     
-    // Create particles
     createParticles();
     addParticleAnimation();
 });
